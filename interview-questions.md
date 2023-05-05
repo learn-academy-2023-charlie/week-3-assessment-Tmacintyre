@@ -46,10 +46,10 @@ Researched answer:
 
 1. Object-oriented programming:
 
-2. Ruby:
+2. Ruby: Ruby is another dynamic and open source object-oriented scripting language that is used in the backend portion of computer programming. 
 
 3. Implicit return:
 
 4. Ruby blocks:
 
-5. Ruby hashes:
+5. Ruby hashes: Ruby hashes are similar to objects in JavaScript as a has is a specific data structure that allows you to store information as key-value pairs.
