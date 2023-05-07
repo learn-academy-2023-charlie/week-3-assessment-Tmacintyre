@@ -15,7 +15,7 @@
 // a) Create a test with expect statements for each of the variables provided.
 
 describe("fibSeq", () => {
-  it("eturns an array that length containing the numbers of the Fibonacci sequence", () => {
+  it("Returns an array that length containing the numbers of the Fibonacci sequence", () => {
     expect(fibSeq(fibLength1)).toEqual([1, 1, 2, 3, 5, 8])
     expect(fibSeq(fibLength2)).toEqual([1, 1, 2, 3, 5, 8, 13, 21, 34, 55])
     })
@@ -40,7 +40,13 @@ const fibLength2 = 10
 // Input: A number
 // Output: returns an array that length containing the numbers of the Fibonacci sequence.
 // Create function called fibSeq
-
+// Using Array.from will allow us to create a new array the size of our number input
+// the .reduce method is going to return the accumulated sum while iterating through the array. 
+// since we are creating an array from scratch in the reduce field we name the array accum, leave the value absent and account for the index.
+// we then us the ternary to produce the outputs for each index using the formula for the fib sequence, Fn = Fn-1 + Fn-2.
+// The first if statement allows us to set the first two values in the array as [1,1] while the else statement executes the formula. 
+// allow empty brackets at the end as we created an empty array from the start.
+// no curly brackets or a return as the body of the function is a single expression. (implicit return)
 
 const fibSeq = (num) =>
   Array.from({ length: num }).reduce(
@@ -97,6 +103,8 @@ const studyMinutesWeek2 = {
 // Input: Object
 // Output: an array of the objects values sorted least to greatest
 // Create a function named leastGreat
+// create a new empty array to store all the values from the object
+// return all the values of the object using dot notation with a .sort to sort them least to greatest.
 
 const leastGreat = (object) => {
   newArr =[]
@@ -142,6 +150,11 @@ const accountTransactions3 = []
 // Input: An array
 // Output: An array of the accumulating sum
 // Create a function called accumSum
+// since the size of the array output is going to be the same as the return we can use a .map to iterate through the original
+// create the arguments sum and value
+// add an expression sum += value which will add 'value' to the 'sum' to update value while iterating
+// the outter arrow function will return the inner arrow function giving us the cumulative sum and updating each index while iterating
+// with 0 at the end of the functions allows us to immediately invoke the function with a sum of 0 to start off the iteration.
 
 
 const accumSum = (arr) => {
